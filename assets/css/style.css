@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background-color: rgb(150, 7, 7);
 }
 
 header {
@@ -36,20 +37,22 @@ main {
 }
 
 .movie-item {
-  width: 300px;
+  width: 230px;
   margin: 10px;
   padding: 10px;
-  background-color: #f4f4f4;
+  background-color: black;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   text-align: center;
+  border-radius: 30px;
 }
 
 .movie-poster {
   width: 200px;
   height: 300px;
   margin: 0 auto;
-  background-color: #ccc;
-  border-radius: 10px;
+  /*this background will be the picture and that picture will be clickable*/
+  background-color: rgb(121, 87, 87);
+  border-radius: 30px;
 }
 
 .movie-title {
@@ -57,7 +60,7 @@ main {
   font-weight: bold;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 200px) {
   .movie-item {
     width: 100%;
   }
