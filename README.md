@@ -13,6 +13,6 @@ Joshua Hebert-
 
 Isaiah Jordan-
 
-Joseph Rudsilll-
+Joseph Rudsill-
 
 Alex Helm-
