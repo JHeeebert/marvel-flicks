@@ -8,58 +8,28 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header>
+  <!--the bg-red-600 is the background, color and color type-->
+  <body class="bg-red-600">
+    <!-- changing the header to where it asklo has a class. having a bckground of black, with white texts and by using the links below
+    https://tailwindcss.com/docs/padding this will help us with the padding and etc, so always come back to here-->
+
+    <header class="bg-black text-white py-5 text-center">
       <h1>Marvel Flicks</h1>
     </header>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Movies</a>
-      <a href="#">About</a>
+    <nav class="bg-gray-800 text-white py-2 text-center">
+      <a href="#" class="text-white no-underline mx-2">Home</a>
+      <a href="#" class="text-white no-underline mx-2">Movies</a>
+      <a href="#" class="text-white no-underline mx-2">About</a>
     </nav>
-    <main>
-      <div class="movie">
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 1</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 2</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 3</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 4</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 5</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 6</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 7</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 8</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 9</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 10</div>
-        </div>
+    <main class="px-5 py-5">
+      <!-- div styling classes-->
+
+      <div class="flex flex-wrap justify-center mb-20">
+        <div class="w-62  m-4 p-4 bg-gray-100 shadow-md text-center rounded-xl">
+        <div class="w-48 h-72 mx-auto bg-gray-200 rounded-xl"></div>
+        <div class="mt-4 font-bold">Movie 1</div>
       </div>
     </main>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
