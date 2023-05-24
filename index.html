@@ -15,18 +15,20 @@
   <!-- changing the header to where it asklo has a class. having a bckground of black, with white texts and by using the links below
     https://tailwindcss.com/docs/padding this will help us with the padding and etc, so always come back to here-->
 
-  <header class="bg-black text-white py-5 text-center">
-    <h1>Marvel Flicks</h1>
+  <header class="bg-black text-red-500 py-5 text-center flex justify-between items-center">
+
+    <h1 class="text-red-500 ml-10">Marvel Flicks</h1>
+    <nav class="mr-4 ">
+      <a href="#" class="text-red no-underline mx-2">Home</a>
+      <a href="#" class="text-red no-underline mx-2">Movies</a>
+      <a href="#" class="text-red no-underline mx-2">About</a>
+    </nav>
   </header>
-  <nav class="bg-gray-800 text-white py-2 text-center">
-    <a href="#" class="text-white no-underline mx-2">Home</a>
-    <a href="#" class="text-white no-underline mx-2">Movies</a>
-    <a href="#" class="text-white no-underline mx-2">About</a>
-  </nav>
+
   <main class="px-5 py-5 flex flex-wrap justify-center">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col">
-        <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+        <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
           <img src="https://images6.alphacoders.com/399/thumbbig-399278.webp" alt="ironman and captain america"
             class="w-full h-full object-cover rounded-lg">
         </div>
@@ -35,7 +37,7 @@
       </div>
 
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col">
-        <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+        <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
           <img src="https://images.alphacoders.com/946/thumbbig-946702.webp" alt="ironman and captain america"
             class="w-full h-full object-cover rounded-lg">
         </div>
@@ -46,7 +48,7 @@
 
 
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col">
-        <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+        <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
           <img
             src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
             alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
