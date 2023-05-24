@@ -3,46 +3,193 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Marvel Flicks</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header>
+  <!--the bg-red-600 is the background, color and color type-->
+  <body class="bg-red-600">
+    <!-- changing the header to where it asklo has a class. having a bckground of black, with white texts and by using the links below
+    https://tailwindcss.com/docs/padding this will help us with the padding and etc, so always come back to here-->
+
+    <header class="bg-black text-white py-5 text-center">
       <h1>Marvel Flicks</h1>
     </header>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Movies</a>
-      <a href="#">About</a>
+    <nav class="bg-gray-800 text-white py-2 text-center">
+      <a href="#" class="text-white no-underline mx-2">Home</a>
+      <a href="#" class="text-white no-underline mx-2">Movies</a>
+      <a href="#" class="text-white no-underline mx-2">About</a>
     </nav>
-    <main>
+    <main class="px-5 py-5 flex flex-wrap justify-center">
       <div class="movie">
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 1</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 2</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 3</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 4</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 5</div>
-        </div>
-        <div class="movie-item">
-          <div class="movie-poster"></div>
-          <div class="movie-title">Movie 6</div>
+        <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+          <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+            <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+            alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+          </div>
+          <div class="movie-title mt-5 font-bold">Movie 1</div>
         </div>
       </div>
+      <!-- div styling classes-->
+
+      <div class="movie ">
+      <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+          <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+            <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+            alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+          </div>
+          <div class="movie-title mt-5 font-bold">Movie 2</div>
+        </div>
+      </div>
+ <!-- got that to work so now im going to copy and paste this to at least 16 movies, because I know there are way more movies than that in the MCU-->
+ <div class="movie ">
+  <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+      <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+        <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+        alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+      </div>
+      <div class="movie-title mt-5 font-bold">Movie 3</div>
+    </div>
+  </div>
+  <div class="movie ">
+    <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+        <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+          <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+          alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+        </div>
+        <div class="movie-title mt-5 font-bold">Movie 4</div>
+      </div>
+    </div>
+    <div class="movie ">
+      <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+          <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+            <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+            alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+          </div>
+          <div class="movie-title mt-5 font-bold">Movie 5</div>
+        </div>
+      </div>
+      <div class="movie ">
+        <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+            <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+              <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+              alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+            </div>
+            <div class="movie-title mt-5 font-bold">Movie 6</div>
+          </div>
+        </div>
+        <div class="movie ">
+          <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+              <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+                <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+              </div>
+              <div class="movie-title mt-5 font-bold">Movie 7</div>
+            </div>
+          </div>
+          <div class="movie ">
+            <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+                <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+                  <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                  alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+                </div>
+                <div class="movie-title mt-5 font-bold">Movie 8</div>
+              </div>
+            </div>
+            <div class="movie ">
+              <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+                  <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                    alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+                  </div>
+                  <div class="movie-title mt-5 font-bold">Movie 9</div>
+                </div>
+              </div>
+              <div class="movie ">
+                <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+                    <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+                      <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                      alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div class="movie-title mt-5 font-bold">Movie 10</div>
+                  </div>
+                </div>
+                <div class="movie ">
+                  <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+                      <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+                        <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+                      </div>
+                      <div class="movie-title mt-5 font-bold">Movie 11</div>
+                    </div>
+                  </div>
+                  <div class="movie ">
+                    <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+                        <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+                          <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                          alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+                        </div>
+                        <div class="movie-title mt-5 font-bold">Movie 12</div>
+                      </div>
+                    </div>
+                    <div class="movie ">
+                      <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+                          <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                            alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+                          </div>
+                          <div class="movie-title mt-5 font-bold">Movie 13</div>
+                        </div>
+                      </div>
+                      <div class="movie ">
+                        <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+                            <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+                              <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                              alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+                            </div>
+                            <div class="movie-title mt-5 font-bold">Movie 14</div>
+                          </div>
+                          </div>
+                          <div class="movie ">
+                            <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+                                <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+                                  <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                                  alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+                                </div>
+                                <div class="movie-title mt-5 font-bold">Movie 15</div>
+                              </div>
+                              </div>
+                              <div class="movie ">
+                                <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+                                    <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+                                      <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                                      alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+                                    </div>
+                                    <div class="movie-title mt-5 font-bold">Movie 16</div>
+                                  </div>
+                                  </div>
+                                  <div class="movie ">
+                                    <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+                                        <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+                                          <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                                          alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+                                        </div>
+                                        <div class="movie-title mt-5 font-bold">Movie 17</div>
+                                      </div>
+                                      </div>
+                                      <div class="movie ">
+                                        <div class="movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white">
+                                            <div class="movie-poster w-52 h-80 mx-auto bg-gray-300 rounded-lg">
+                                              <img src="https://images.unsplash.com/photo-1626278664285-f796b9ee7806?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwdGFpbiUyMGFtZXJpY2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
+                                              alt="ironman and captain america" class="w-full h-full object-cover rounded-lg">
+                                            </div>
+                                            <div class="movie-title mt-5 font-bold">Movie 18</div>
+                                          </div>
+                                          </div>
+      </div>
+      </div>
     </main>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
