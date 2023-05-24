@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marvel Flicks</title>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
 </head>
 <!--the bg-red-600 is the background, color and color type-->
 
@@ -16,12 +16,42 @@
     https://tailwindcss.com/docs/padding this will help us with the padding and etc, so always come back to here-->
 
   <header class="bg-black text-red-500 py-5 text-center flex justify-between items-center">
-
-    <h1 class="text-red-500 ml-10">Marvel Flicks</h1>
+    <img src="https://seeklogo.com/images/M/marvel-comics-logo-B9EA67A8EE-seeklogo.com.png" alt="marvel logo"
+      width="80">
+    <!--<h1 class="text-red-500 ml-10">Marvel Flicks</h1>-->
     <nav class="mr-4 ">
-      <a href="#" class="text-red no-underline mx-2">Home</a>
-      <a href="#" class="text-red no-underline mx-2">Movies</a>
-      <a href="#" class="text-red no-underline mx-2">About</a>
+      <div class="relative inline-block text-left">
+        <div>
+          <button type="button"
+            class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-black hover:bg-gray-50"
+            id="menu-button" aria-expanded="false" aria-haspopup="true">
+
+            <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+
+        <!--
+          Dropdown menu, show/hide based on menu state.
+        -->
+        <div
+          class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-red-600 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none font-bold"
+          role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" style="display: none;">
+          <div class="py-1" role="none">
+            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+            <a href="#" class="text-black block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+              id="menu-item-0">Movies</a>
+            <a href="#" class="text-black block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+              id="menu-item-1">About</a>
+            <a href="#" class="text-black block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+              id="menu-item-2">License</a>
+            </form>
+          </div>
+        </div>
+      </div>
     </nav>
   </header>
 
