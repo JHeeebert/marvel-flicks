@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marvel Flicks</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <!--the bg-red-600 is the background, color and color type-->
-  <body class="bg-red-600">
-    <!-- changing the header to where it asklo has a class. having a bckground of black, with white texts and by using the links below
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marvel Flicks</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!--the bg-red-600 is the background, color and color type-->
+
+<body class="bg-red-600">
+  <!-- changing the header to where it asklo has a class. having a bckground of black, with white texts and by using the links below
     https://tailwindcss.com/docs/padding this will help us with the padding and etc, so always come back to here-->
 
   <header class="bg-black text-red-500 py-5 text-center flex justify-between items-center">
-
-    <h1 class="text-red-500 ml-10">Marvel Flicks</h1>
+    <img src="https://seeklogo.com/images/M/marvel-comics-logo-B9EA67A8EE-seeklogo.com.png" alt="marvel logo" width="80"
+      class="ml-5">
+    <!--<h1 class="text-red-500 ml-10">Marvel Flicks</h1>-->
     <nav class="mr-4 ">
-      <a href="#" class="text-red no-underline mx-2">Home</a>
-      <a href="#" class="text-red no-underline mx-2">Movies</a>
-      <a href="#" class="text-red no-underline mx-2">About</a>
+      <div class="relative inline-block text-left">
+        <div>
+          <button type="button"
+            class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-black hover:bg-gray-50"
+            id="menu-button" aria-expanded="false" aria-haspopup="true">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+
+          </button>
+        </div>
+
+        <!--
+          Dropdown menu, show/hide based on menu state.
+        -->
+        <div
+          class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-red-600 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none font-bold"
+          role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" style="display: none;">
+          <div class="py-1" role="none">
+            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+            <a href="#" class="text-black block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+              id="menu-item-0">Movies</a>
+            <a href="#" class="text-black block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+              id="menu-item-1">About</a>
+            <a href="#" class="text-black block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+              id="menu-item-2">License</a>
+            </form>
+          </div>
+        </div>
+      </div>
     </nav>
   </header>
 
