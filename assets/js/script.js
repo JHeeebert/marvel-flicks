@@ -1,8 +1,15 @@
 const menuButton = document.getElementById("menu-button");
-const dropdownMenu = document.querySelector(".absolute.right-0");
+const navbarItems = document.querySelector(".hidden.lg\\:flex");
 
-menuButton.addEventListener("click", function () {
-  const expanded = menuButton.getAttribute("aria-expanded") === "true" || false;
-  menuButton.setAttribute("aria-expanded", !expanded);
-  dropdownMenu.style.display = expanded ? "none" : "block";
+function toggleMenu() {
+  navbarItems.classList.toggle("hidden");
+}
+
+menuButton.addEventListener("click", toggleMenu);
+
+const clearButton = document.getElementById("clearButton");
+const searchText = document.getElementById("searchText");
+
+clearButton.addEventListener("click", function () {
+  searchText.value = "";
 });
