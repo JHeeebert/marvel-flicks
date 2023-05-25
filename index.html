@@ -27,38 +27,37 @@
         id="searchButton">Search</button>
     </div>
     <!--<h1 class="text-red-500 ml-10">Marvel Flicks</h1>-->
-    <nav class="mr-4 ">
-      <div class="relative inline-block text-left">
-        <div>
-          <button type="button"
-            class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-black hover:bg-gray-50"
-            id="menu-button" aria-expanded="false" aria-haspopup="true">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
+    <div class="relative inline-block text-left">
+      <div>
+        <button type="button"
+          class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-black hover:bg-gray-50"
+          id="menu-button" aria-expanded="false" aria-haspopup="true">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
 
-          </button>
-        </div>
+        </button>
+      </div>
 
-        <!--
+      <!--
           Dropdown menu, show/hide based on menu state.
         -->
-        <div
-          class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-red-600 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none font-bold"
-          role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" style="display: none;">
-          <div class="py-1" role="none">
-            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-            <a href="#" class="text-black block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-              id="menu-item-0">Movies</a>
-            <a href="#" class="text-black block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-              id="menu-item-1">About</a>
-            <a href="#" class="text-black block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
-              id="menu-item-2">License</a>
-            </form>
-          </div>
+      <div
+        class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-red-600 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none font-bold"
+        role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" style="display: none;">
+        <div class="py-1" role="none">
+          <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+          <a href="#" class="text-black block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+            id="menu-item-0">Movies</a>
+          <a href="#" class="text-black block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+            id="menu-item-1">About</a>
+          <a href="#" class="text-black block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+            id="menu-item-2">License</a>
+          </form>
         </div>
       </div>
+    </div>
     </nav>
 
   </header>
@@ -152,9 +151,26 @@
   <footer class="bg-black py-4">
     <div class="container mx-auto px-4 flex justify-between items-center text-center">
       <p class="text-white">&copy; 2023 Marvel Flicks. <br>All Rights Reserved</p>
+      <div class="flex items-center">
+        <a href="https://www.hulu.com" id="YouTube" target="_blank" rel="">
+          <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Youtube_icon-icons.com_66802.png" alt="YouTube"
+            class="w-11 ml-4 h-14 mx-5">
+        </a>
+        <div class="flex items-center">
+          <a href="https://www.hulu.com" id="Hulu" target="_blank" rel="">
+            <img src="https://img.icons8.com/?size=512&id=TG5b2eR21DuF&format=png" alt="Hulu" class="ml-4 h-14">
+          </a>
 
+          <a href="https://www.netflix.com" id="Netflix" target="_blank" rel="">
+            <img src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png" alt="Netflix" class="ml-4 h-14">
+          </a>
 
-    </div>
+          <a href="https://www.disneyplus.com" id="Disney" target="_blank" rel="">
+            <img src="https://cdn.icon-icons.com/icons2/2657/PNG/256/disney_plus_icon_161064.png" alt="Disney Plus"
+              class="ml-4 h-14">
+          </a>
+        </div>
+      </div>
   </footer>
   <script src="./assets/js/script.js"></script>
 </body>
