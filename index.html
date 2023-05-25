@@ -15,9 +15,17 @@
   <!-- changing the header to where it asklo has a class. having a bckground of black, with white texts and by using the links below
     https://tailwindcss.com/docs/padding this will help us with the padding and etc, so always come back to here-->
 
-  <header class="bg-black text-red-500 py-5 text-center flex justify-between items-center">
+  <header class="bg-black text-red-500 py-5 text-right flex justify-between items-center">
     <img src="https://seeklogo.com/images/M/marvel-comics-logo-B9EA67A8EE-seeklogo.com.png" alt="marvel logo" width="80"
       class="ml-5">
+    <!-- makign a search bar-->
+    <div class="flex items-center">
+      <input id="text" id="searchText" placeholder=""
+        class="bg-red-600 text-gray-900 rounded-xl px-3 py-2 mr-4 focus:outline-none">
+      <button type="button"
+        class="bg-red-600 text-gray-900 rounded-xl px-3 py-2 font-bold hover:bg-red-500 focus:outline-none"
+        id="searchButton">Search</button>
+    </div>
     <!--<h1 class="text-red-500 ml-10">Marvel Flicks</h1>-->
     <nav class="mr-4 ">
       <div class="relative inline-block text-left">
@@ -52,13 +60,14 @@
         </div>
       </div>
     </nav>
+
   </header>
 
   <main class="px-5 py-5 flex flex-wrap justify-center">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col rounded-xl">
         <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
-          <img src="https://wallpapercave.com/dwp1x/wp5271850.jpg" alt="captain america"
+          <a href="blank"> </a><img src="https://wallpapercave.com/dwp1x/wp5271850.jpg" alt="captain america" id="mp1"
             class="w-full h-full object-cover rounded-lg">
         </div>
         <div class="movie-title mt-5 font-bold text-xs">Captain America <p>The First Avenger</p>
@@ -67,7 +76,7 @@
 
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col rounded-xl">
         <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
-          <img src="https://wallpapercave.com/dwp1x/wp4331452.jpg" alt="captain marvel"
+          <img src="https://wallpapercave.com/dwp1x/wp4331452.jpg" alt="captain marvel" id="mp2"
             class="w-full h-full object-cover rounded-lg">
         </div>
         <div class="movie-title mt-5 font-bold">Captain Marvel</div>
@@ -78,28 +87,28 @@
 
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col rounded-xl">
         <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
-          <img src="https://wallpapercave.com/dwp1x/wp3198164.jpg" alt="ironman #1"
+          <img src="https://wallpapercave.com/dwp1x/wp3198164.jpg" alt="ironman #1" id="mp3"
             class="w-full h-full object-cover rounded-lg">
         </div>
         <div class="movie-title mt-5 font-bold">Iron Man</div>
       </div>
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col rounded-xl">
         <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
-          <img src="https://wallpapercave.com/dwp1x/fJxKhs9.jpg" alt="ironman 2"
+          <img src="https://wallpapercave.com/dwp1x/fJxKhs9.jpg" alt="ironman 2" id="mp4"
             class="w-full h-full object-cover rounded-lg">
         </div>
         <div class="movie-title mt-5 font-bold">Iron man 2</div>
       </div>
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col rounded-xl">
         <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
-          <img src="https://wallpapercave.com/dwp1x/wp6705852.jpg" alt="The Incredible Hulk"
+          <img src="https://wallpapercave.com/dwp1x/wp6705852.jpg" alt="The Incredible Hulk" id="mp5"
             class="w-full h-full object-cover rounded-lg">
         </div>
         <div class="movie-title mt-5 font-bold">The Incredible Hulk</div>
       </div>
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col rounded-xl">
         <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
-          <img src="https://wallpapercave.com/wp/wp6644040.jpg" alt="thor"
+          <img src="https://wallpapercave.com/wp/wp6644040.jpg" alt="thor" id="mp6"
             class="w-full h-full object-cover rounded-lg">
         </div>
         <div class="movie-title mt-5 font-bold">
@@ -108,28 +117,28 @@
       </div>
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col rounded-xl">
         <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
-          <img src="https://wallpapercave.com/dwp1x/vDy3sUb.jpg" alt="Avengers"
+          <img src="https://wallpapercave.com/dwp1x/vDy3sUb.jpg" alt="Avengers" id="mp7"
             class="w-full h-full object-cover rounded-lg">
         </div>
         <div class="movie-title mt-5 font-bold">The Avengers</div>
       </div>
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col rounded-xl">
         <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
-          <img src="https://wallpapercave.com/dwp1x/wp3079596.jpg" alt="Thor The Dark World"
+          <img src="https://wallpapercave.com/dwp1x/wp3079596.jpg" alt="Thor The Dark World" id="mp8"
             class="w-full h-full object-cover rounded-lg">
         </div>
         <div class="movie-title mt-5 font-bold">Thor The Dark World</div>
       </div>
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col rounded-xl">
         <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
-          <img src="https://wallpapercave.com/dwp1x/wp10583677.jpg" alt="Iron Man 3"
+          <img src="https://wallpapercave.com/dwp1x/wp10583677.jpg" alt="Iron Man 3" id="mp9"
             class="w-full h-full object-cover rounded-lg">
         </div>
         <div class="movie-title mt-5 font-bold">Iron Man 3</div>
       </div>
       <div class="movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col rounded-xl">
         <div class="movie-poster w-42 h-80 mx-auto bg-gray-300 rounded-lg">
-          <img src="https://wallpapercave.com/dwp1x/wp8145301.jpg" alt="Captain America The Winter Soldier"
+          <img src="https://wallpapercave.com/dwp1x/wp8145301.jpg" alt="Captain America The Winter Soldier" id="mp10"
             class="w-full h-full object-cover rounded-lg">
         </div>
         <div class="movie-title mt-5 font-bold text-xs">Captain America <br>The Winter Soldier
@@ -140,6 +149,13 @@
     </div>
     </div>
   </main>
+  <footer class="bg-black py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center text-center">
+      <p class="text-white">&copy; 2023 Marvel Flicks. <br>All Rights Reserved</p>
+
+
+    </div>
+  </footer>
   <script src="./assets/js/script.js"></script>
 </body>
 
