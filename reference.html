@@ -92,3 +92,29 @@ text-5xl font-size: 3rem;
 
 
 https://tailwindui.com/components/application-ui/elements/dropdowns
+
+
+
+
+@media (max-width: 320px) {
+header {
+padding: 10px; /* Adjust the padding as desired */
+text-align: center;
+}
+
+header img {
+margin-left: 0; /* Reset the margin */
+}
+
+header .flex {
+flex-direction: column;
+align-items: center;
+}
+
+header .flex button,
+header .flex input,
+header .flex button#searchButton {
+margin-top: 10px; /* Add some spacing between the elements */
+width: 100%; /* Make the elements full-width */
+}
+}
