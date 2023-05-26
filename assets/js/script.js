@@ -4,10 +4,15 @@
 //var _marvel = new MarvelApi.Marvel();
 
 const menuButton = document.getElementById("menu-button");
+const menuItems = document.getElementById("menu-items");
 
-// Add click event listener to the menu button
 menuButton.addEventListener("click", () => {
-  // Toggle the visibility of the navbar items
-  const navbarItems = document.querySelector(".lg\\:flex");
-  navbarItems.classList.toggle("hidden");
+  menuItems.classList.toggle("hidden");
 });
+
+const navLinks = menuItems.getElementsByTagName("a");
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", () => {
+    menuItems.classList.add("hidden");
+  });
+}
