@@ -1,4 +1,6 @@
-# marvel-flicks
+Marvel Flicks
+an app that allows you to search the Marvel API for all the Marvel films from 2008 until now. Inside the description there will be a link to the rotten tomato info and comic books that movie is based off.
+
 ## User Story 
 
 ```
@@ -13,6 +15,6 @@ Joshua Hebert-
 
 Isaiah Jordan-
 
-Joseph Rudsill-
+Joseph Rudsilll-
 
 Alex Helm-
