@@ -16,3 +16,11 @@ for (let i = 0; i < navLinks.length; i++) {
     menuItems.classList.add("hidden");
   });
 }
+document.addEventListener("click", function (event) {
+  var flipCard = document.querySelector(".flip-card");
+  var isClickedInsideCard = flipCard.contains(event.target);
+
+  if (!isClickedInsideCard) {
+    flipCard.classList.remove("flip");
+  }
+});
