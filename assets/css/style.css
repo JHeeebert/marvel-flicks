@@ -76,6 +76,46 @@
   object-fit: cover;
   border-radius: 10px;
 }
+/*simple hover flip fort the customized Copy right footer*/
+.flip-container {
+  perspective: 1000px;
+  display: inline-block;
+}
+
+.flipper {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+  background-color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 320px) {
   /* CSS styles specific to iPhone SE */
 }

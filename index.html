@@ -67,7 +67,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
 
       <div
-        class="flip-card movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col rounded-xl transition-opacity duration-500">
+        class="flip-card movie movie-item mx-4 my-5 p-5 bg-black shadow-md text-center text-white flex flex-col rounded-xl ">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <div class="movie-poster w-full h-80 mx-auto bg-gray-300 rounded-lg">
@@ -190,7 +190,14 @@
 
   <footer class="bg-black py-4 w-400 mx-auto ">
     <div class="container mx-auto px-4 flex justify-between  items-center text-center ">
-      <p class="text-white ">&copy; 2023 Marvel Flicks. All Rights Reserved</p>
+      <div class="flip-container">
+        <div class="flipper">
+          <p class="text-red-600 hover-flip font-bold ">&copy; 2023 Marvel Flicks. All Rights Reserved</p>
+          <p class="back text-red-600 font-bold">Like what you see? Click on one of the streaming services
+            to your right!
+          </p>
+        </div>
+      </div>
       <div class="flex items-center">
         <a href="" id="YouTube" target="_blank" rel="">
           <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Youtube_icon-icons.com_66802.png" alt="YouTube"
