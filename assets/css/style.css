@@ -1,3 +1,9 @@
+body {
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+}
+
 /* Styles for the movie container */
 .movie {
   height: 90%;
@@ -20,6 +26,9 @@
 /* Styles for the flip card animation */
 .flip-card {
   perspective: 1000px;
+  width: 300px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .flip-card:hover .flip-card-inner,
