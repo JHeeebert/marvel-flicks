@@ -2,7 +2,7 @@
 
 # Overview
 
-Introducing Marvel Flicks, the ultimate app for Marvel movie and comic fans! With Marvel Flicks, you'll have access to a searchable database of all Marvel Movies, complete with posters that display information about each film and its corresponding comics. Built using dynamic HTML, Tailwind CSS, and JavaScript, Marvel Flicks is the perfect way to keep track of your favorite Marvel movies, and comics all in one place. So whether you're a die-hard fan or just getting started with the Marvel universe, download Marvel Flicks today and start exploring!
+Introducing Marvel Flicks, the ultimate app for Marvel movie and comic fans! With Marvel Flicks, you'll have access to a searchable database of all Marvel movies, complete with posters that display information about each film and its corresponding comics. Built using dynamic HTML, Tailwind CSS, and JavaScript, Marvel Flicks is the perfect way to keep track of your favorite Marvel movies, and comics all in one place. So whether you're a die-hard fan or just getting started with the Marvel universe, download Marvel Flicks today and start exploring!
 
 # Concept
 
@@ -30,7 +30,7 @@ enjoy the Marvel universe.
 
 # User Story
 
-**As** a Marrvel fan <br>
+**As** a Marvel fan <br>
 
 **I WANT** an application that shows me all of the Marvel movies from 2008 until now with information from the Marvel API and rating information from the Rotten Tomatoes API <br>
 **SO THAT** I can find information about some of my favorite movies at anytime
@@ -73,8 +73,7 @@ sharing easy ways to implement JS functions for team
 ## **Joseph Rudasill**
 
 Provided the entire layout through dynamic HTML and introduced us all to Tailwinds CSS. Joseph
-created a fun layout for everyone to be able to add javascript too and was a workhorse through entire
-project (Note from Joseph : Could not have done it without ya'll)
+created a fun layout for everyone to be able to add javascript to.
 
 ## **Alex Helm**
 
