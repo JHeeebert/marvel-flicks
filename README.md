@@ -48,7 +48,16 @@ as their compatibility with a wide range of browsers and devices. Overall, the u
 enabled the development of a highly functional and user-friendly app that meets the needs of Marvel
 fans worldwide.
 
-# Breakdown of tasks and roles
+# Contributors
+
+Joshua Hebert<br>
+Isaiah Jordan<br>
+Joseph Rudsill<br>
+Alex Helm
+
+#
+
+## Breakdown of tasks and roles
 
 ## **Joshua Hebert**
 
@@ -99,10 +108,3 @@ https://jheeebert.github.io/marvel-flicks/
 # Deployed Repo
 
 https://github.com/JHeeebert/marvel-flicks
-
-# Contributors
-
-Joshua Hebert<br>
-Isaiah Jordan<br>
-Joseph Rudsill<br>
-Alex Helm
