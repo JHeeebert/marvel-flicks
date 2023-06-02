@@ -54,38 +54,41 @@
       </div>
     </nav>
   </header>
+
+  <main class="px-5 py-5 flex justify-center items-center">
+    <div class="max-w-md">
+      <div class="flex items-center justify-center mb-">
+        <input id="searchText" placeholder="Search Marvel Movies"
+          class="bg-red-600 text-black rounded-xl px-3 py-2 focus:outline-none">
+        <button type="button"
+          class="bg-red-600 text-gray-900 rounded-xl px-3 py-2 font-bold hover:bg-red-500 ml-4 h-10 focus:outline-none"
+          id="searchButton">
+          <img src="https://cdn-icons-png.flaticon.com/128/751/751463.png" class="h-4">
+        </button>
+        <button type="button"
+          class="bg-red-600 text-gray-900 rounded-xl px-3 py-2 font-bold hover:bg-red-500 ml-2 h-10 focus:outline-none"
+          id="clearButton">
+          <img src="https://img.icons8.com/?size=512&id=68064&format=png" class="h-4">
+        </button>
+      </div>
+  </main>
   <aside>
-    <main class="px-5 py-5 flex justify-center items-center">
-      <div class="max-w-md">
-        <div class="flex items-center justify-center mb-">
-          <input id="searchText" placeholder="Search"
-            class="bg-red-600 text-gray-900 rounded-xl px-3 py-2 focus:outline-none">
-          <button type="button"
-            class="bg-red-600 text-gray-900 rounded-xl px-3 py-2 font-bold hover:bg-red-500 ml-2 focus:outline-none"
-            id="searchButton">
-            <img src="https://cdn-icons-png.flaticon.com/128/751/751463.png" class="h-4">
-          </button>
-          <button type="button"
-            class="bg-red-600 text-gray-900 rounded-xl px-3 py-2 font-bold hover:bg-red-500 ml-2 focus:outline-none"
-            id="clearButton">
-            <img src="https://img.icons8.com/?size=512&id=68064&format=png" class="h-4">
-          </button>
-        </div>
-        <div id="searchedMovies">
-          <div class="searchedMovies" id="movie1"></div>
-          <div class="searchedMovies" id="movie2"></div>
-          <div class="searchedMovies" id="movie3"></div>
-          <div class="searchedMovies" id="movie4"></div>
-          <div class="searchedMovies" id="movie5"></div>
-          <div class="searchedMovies" id="movie6"></div>
-          <div class="searchedMovies" id="movie7"></div>
-          <div class="searchedMovies" id="movie8"></div>
-        </div>
-        <!-- Movie cards go here -->
-      </div>
-      </div>
-    </main>
+    <div id="searchedMovies">
+      <div class="searchedMovies" id="movie1"></div>
+      <div class="searchedMovies" id="movie2"></div>
+      <div class="searchedMovies" id="movie3"></div>
+      <div class="searchedMovies" id="movie4"></div>
+      <div class="searchedMovies" id="movie5"></div>
+      <div class="searchedMovies" id="movie6"></div>
+      <div class="searchedMovies" id="movie7"></div>
+      <div class="searchedMovies" id="movie8"></div>
+    </div>
+    <!-- Movie cards go here -->
+    </div>
+    </div>
   </aside>
+
+
 
 
 
@@ -107,8 +110,7 @@
         <div class="flip-container">
           <div class="flipper">
             <p class="text-red-600 hover-flip font-bold">&copy; 2023 Marvel Flicks. All Rights Reserved</p>
-            <p class="back text-red-600 font-bold">Like what you see? Click on one of the streaming services to your
-              right!</p>
+            <p class="back text-red-600 font-bold">Like what you see? Click on one of the streaming services below!</p>
           </div>
         </div>
       </div>

@@ -16,20 +16,3 @@ for (let i = 0; i < navLinks.length; i++) {
     menuItems.classList.add("hidden");
   });
 }
-document.addEventListener("DOMContentLoaded", function () {
-  var flipCards = document.querySelectorAll(".flip-card");
-  var isFlipped = false;
-
-  flipCards.forEach(function (flipCard) {
-    flipCard.addEventListener("click", function () {
-      if (isFlipped) {
-        flipCards.forEach(function (card) {
-          card.classList.remove("flip");
-        });
-      } else {
-        flipCard.classList.add("flip");
-      }
-      isFlipped = !isFlipped;
-    });
-  });
-});
