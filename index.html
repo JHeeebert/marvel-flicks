@@ -133,6 +133,84 @@
     </div>
   </footer>
   <script src="./assets/js/script.js"></script>
+
+  <script>
+    const movies = [
+      { name: 'captain america first avenger', link: 'https://www.themoviedb.org/movie/1771-captain-america-the-first-avenger' },
+      { name: 'captain marvel', link: 'https://www.themoviedb.org/movie/299537-captain-marvel' },
+      { name: 'iron man', link: 'https://www.themoviedb.org/movie/1726-iron-man' },
+      { name: 'iron Man 2', link: 'https://www.themoviedb.org/movie/10138-iron-man-2' },
+      { name: 'the incredible hulk', link: 'https://www.themoviedb.org/movie/1724-the-incredible-hulk' },
+      { name: 'thor', link: 'https://www.themoviedb.org/movie/10195-thor' },
+      { name: 'the avengers', link: 'https://www.themoviedb.org/movie/24428-the-avengers' },
+      { name: 'thor darkworld', link: 'https://www.themoviedb.org/movie/76338-thor-the-dark-world' },
+      { name: 'iron man 3', link: 'https://www.themoviedb.org/movie/68721-iron-man-3' },
+      { name: 'captain america winter soldier', link: 'https://www.themoviedb.org/movie/100402-captain-america-the-winter-soldier' },
+      { name: 'guardians', link: 'https://www.themoviedb.org/movie/118340-guardians-of-the-galaxy' },
+      { name: 'guardians 2', link: 'https://www.themoviedb.org/movie/283995-guardians-of-the-galaxy-2' },
+      { name: 'avengers age of ultron', link: 'https://www.themoviedb.org/movie/99861-avengers-age-of-ultron' },
+      { name: 'ant man', link: 'https://www.themoviedb.org/movie/102899-ant-man' },
+      { name: 'captain amaerica civil war', link: 'https://www.themoviedb.org/movie/271110-captain-america-civil-war' },
+      { name: 'black widow', link: 'https://www.themoviedb.org/movie/497698-black-widow' },
+      { name: 'spider man homecoming', link: 'https://www.themoviedb.org/movie/315635-spider-man-homecoming' },
+      { name: 'black panther', link: 'https://www.themoviedb.org/movie/284054-black-panther' },
+      { name: 'doctor strange', link: 'https://www.themoviedb.org/movie/284052-doctor-strange' },
+      { name: 'thor rangarok', link: 'https://www.themoviedb.org/movie/284053-thor-ragnarok' },
+      { name: 'antman wasp', link: 'https://www.themoviedb.org/movie/363088-ant-man-and-the-wasp' },
+      { name: 'avengers infinity war', link: 'https://www.themoviedb.org/movie/299536-avengers-infinity-war' },
+      { name: 'avengers end game', link: 'https://www.themoviedb.org/movie/299534-avengers-endgame' },
+      { name: 'spiderman far from home', link: 'https://www.themoviedb.org/movie/429617-spider-man-far-from-home' },
+      { name: 'shang-chi ten rings', link: 'https://www.themoviedb.org/movie/566525-shang-chi-and-the-legend-of-the-ten-rings' },
+      { name: 'eternals', link: 'https://www.themoviedb.org/movie/524434-eternals' },
+      { name: 'spiderman no way-home', link: 'https://www.themoviedb.org/movie/634649-spider-man-no-way-home' },
+      { name: 'doctor strange multiverse', link: 'https://www.themoviedb.org/movie/453395-doctor-strange-in-the-multiverse-of-madness' },
+      { name: 'thor love and thunder', link: 'https://www.themoviedb.org/movie/616037-thor-love-and-thunder' },
+      { name: 'antman-quantumania', link: 'https://www.themoviedb.org/movie/640146-ant-man-and-the-wasp-quantumania' },
+      { name: 'guardians 3', link: 'https://www.themoviedb.org/movie/447365-guardians-of-the-galaxy-vol-3' },
+      { name: 'black panther wakanda forever', link: 'https://www.themoviedb.org/movie/505642-black-panther-wakanda-forever' },
+      
+    ];
+
+    function generateMovieLinks(searchText) {
+      const searchResults = $("#searchResults");
+      searchResults.empty();
+
+      const lowercaseSearchText = searchText.toLowerCase();
+
+      const matchingMovies = movies.filter((movie) =>
+        movie.name.includes(lowercaseSearchText)
+      );
+
+      if (matchingMovies.length === 0) {
+        searchResults.append('<div class="text-white">No results found.</div>');
+      } else {
+        const movieList = $('<ul class="movie-list"></ul>');
+
+        matchingMovies.forEach((movie) => {
+          const movieLink = $(
+            `<li><a href="${movie.link}" target="_blank">${movie.name}</a></li>`
+          );
+          movieList.append(movieLink);
+        });
+
+        searchResults.append(movieList);
+      }
+    }
+
+    $(document).ready(function () {
+      $("#searchButton").click(function () {
+        const searchText = $("#searchText").val();
+        generateMovieLinks(searchText);
+      });
+
+      $("#clearButton").click(function () {
+        $("#searchText").val("");
+        $("#searchResults").empty();
+      });
+    });
+  </script>
+</body>
+</html>
 </body>
 
 </html>
