@@ -107,3 +107,6 @@ https://jheeebert.github.io/marvel-flicks/
 # Deployed Repo
 
 https://github.com/JHeeebert/marvel-flicks
+![Screenshot (57)](https://github.com/JHeeebert/marvel-flicks/assets/124106922/ccdcd257-cdb8-4336-8b0b-80418c4afffd)
+
+
