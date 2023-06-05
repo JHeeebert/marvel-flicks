@@ -49,10 +49,31 @@
       <div id="searchResults" class="flex flex-wrap justify-center"></div>
     </div>
   </main>
-
-  <footer class="py-10 px-5 flex items-center justify-center bg-red-600">
-    <p class="text-white">© 2023 Marvel Flicks. All rights reserved.</p>
-  </footer>
+  <footer class="bg-black py-4 fixed bottom-0 w-full">
+    <div class="container mx-auto px-4 flex flex-col justify-between items-center text-center h-full ">
+      <div class="flex flex-col items-center justify-center flex-grow">
+        <div class="flip-container">
+          <div class="flipper">
+            <p class="text-red-600 hover-flip font-bold">&copy; 2023 Marvel Flicks. All Rights Reserved</p>
+            <p class="back text-red-600 font-bold">Like what you see? Click on one of the streaming services below!</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center pt-4">
+        <a href="https://www.youtube.com/" id="YouTube" target="_blank" rel="">
+          <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Youtube_icon-icons.com_66802.png" alt="YouTube"
+            class="w-11 ml-4 h-14 mx-5 transition-opacity duration-500 hover:opacity-75">
+        </a>
+        <a href="https://www.netflix.com/login" id="Netflix" target="_blank" rel="">
+          <img src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png" alt="Netflix"
+            class="ml-4 h-11 transition-opacity duration-500 hover:opacity-75">
+        </a>
+        <a href="https://www.disneyplus.com/login" id="Disney" target="_blank" rel="">
+          <img src="https://cdn.icon-icons.com/icons2/2657/PNG/256/disney_plus_icon_161064.png" alt="Disney Plus"
+            class="ml-4 h-14 transition-opacity duration-500 hover:opacity-75">
+        </a>
+      </div>
+    </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
