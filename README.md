@@ -92,7 +92,7 @@ were able to put out a product that we were all happy with!
 - We were presented with real life challenges that may happen daily in the field and I feel like we
   troubleshooted and executed a backup plan under pressure very well.
 
-# Demo (will be on soon)
+
 
 # Directions for Future Development
 
