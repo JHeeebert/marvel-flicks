@@ -57,23 +57,30 @@
       <div id="searchResults" class="flex flex-wrap justify-center"></div>
     </div>
   </main>
-
-  <footer class="bg-black py-4 w-full absolute bottom-0">
-    <div class="container mx-auto px-4 flex justify-between items-center text-center">
-      <p class="text-white">&copy; 2023 Marvel Flicks. All Rights Reserved</p>
-      <div class="flex items-center">
-        <a href="https://www.youtube.com/" id="YouTube" target="_blank" rel="">
-          <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Youtube_icon-icons.com_66802.png" alt="YouTube"
-            class="w-11 ml-4 h-14 mx-5">
-        </a>
-        <a href="netflix.com" id="Netflix" target="_blank" rel="">
-          <img src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png" alt="Netflix" class="ml-4 h-11">
-        </a>
-        <a href="https://www.disneyplus.com/" id="Disney" target="_blank" rel="">
-          <img src="https://cdn.icon-icons.com/icons2/2657/PNG/256/disney_plus_icon_161064.png" alt="Disney Plus"
-            class="ml-4 h-14">
-        </a>
+  <footer class="bg-black py-4   static bottom-0 w-full">
+    <div class="container mx-auto px-4 flex flex-col justify-between items-center text-center">
+      <div class="flex flex-col items-center justify-center flex-grow">
+        <div class="flip-container">
+          <div class="flipper">
+            <p class="text-red-600 hover-flip font-bold">&copy; 2023 Marvel Flicks. All Rights Reserved</p>
+            <p class="back text-red-600 font-bold">Like what you see? Click on one of the streaming services below!</p>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="flex items-center justify-center">
+      <a href="https://www.youtube.com/" id="YouTube" target="_blank" rel="">
+        <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Youtube_icon-icons.com_66802.png" alt="YouTube"
+          class="w-11 ml-4 h-14 mx-5 transition-opacity duration-500 hover:opacity-75">
+      </a>
+      <a href="https://www.netflix.com/login" id="Netflix" target="_blank" rel="">
+        <img src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png" alt="Netflix"
+          class="ml-4 h-11 transition-opacity duration-500 hover:opacity-75">
+      </a>
+      <a href="https://www.disneyplus.com/login" id="Disney" target="_blank" rel="">
+        <img src="https://cdn.icon-icons.com/icons2/2657/PNG/256/disney_plus_icon_161064.png" alt="Disney Plus"
+          class="ml-4 h-14 transition-opacity duration-500 hover:opacity-75">
+      </a>
     </div>
   </footer>
 
