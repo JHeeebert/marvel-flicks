@@ -15,6 +15,36 @@ for (let i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener("click", () => {
     menuItems.classList.add("hidden");
   });
+
+function getHeroData(id){
+const url='https://superheroapi.com/api/access-token/search/name
+
+fetch(url)
+.then(response=>response.json())
+.then(data=>{
+  
+});
+}
+function showHeroData(data) {
+  const container = document.querySelector('.hero-container');
+  const image = document.createElement('img');
+  const name = document.createElement('h2');
+  const fullName = document.createElement('p');
+  const firstAppearance = document.createElement('p');
+
+  image.src = data.image.url;
+  name.textContent = data.name;
+  fullName.textContent = `Full Name: ${}`;
+  firstAppearance.textContent = `First Appearance: ${}`;
+
+  container.appendChild(image);
+  container.appendChild(name);
+  container.appendChild(fullName);
+  container.appendChild(firstAppearance);
+}
+
+getHeroData(30)
+
 }
 document.addEventListener("DOMContentLoaded", function () {
   var flipCards = document.querySelectorAll(".flip-card");
