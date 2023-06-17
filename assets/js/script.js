@@ -16,34 +16,29 @@ for (let i = 0; i < navLinks.length; i++) {
     menuItems.classList.add("hidden");
   });
 
-function getHeroData(id){
-const url='https://superheroapi.com/api/access-token/search/name
+function getHeroData(element,character){
+  const name= 'batman'
+  const url=`https://www.omdbapi.com/?t=${character}&apikey=67a1f106`
+//const url=`https://superheroapi.com/api/10230198626659760/search/${name}`
 
 fetch(url)
+
 .then(response=>response.json())
 .then(data=>{
+  console.log(data)
+showHeroData(data,element)
+
   
 });
 }
-function showHeroData(data) {
-  const container = document.querySelector('.hero-container');
-  const image = document.createElement('img');
-  const name = document.createElement('h2');
-  const fullName = document.createElement('p');
-  const firstAppearance = document.createElement('p');
-
-  image.src = data.image.url;
-  name.textContent = data.name;
-  fullName.textContent = `Full Name: ${}`;
-  firstAppearance.textContent = `First Appearance: ${}`;
-
-  container.appendChild(image);
-  container.appendChild(name);
-  container.appendChild(fullName);
-  container.appendChild(firstAppearance);
+function showHeroData(data,element) {
+ const p=document.createElement('p')
+ p.style.color='white'
+ p.textContent=data.Plot
+ element.append(p)
 }
 
-getHeroData(30)
+//getHeroData(70)
 
 }
 document.addEventListener("DOMContentLoaded", function () {
@@ -51,7 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
   var isFlipped = false;
 
   flipCards.forEach(function (flipCard) {
-    flipCard.addEventListener("click", function () {
+    flipCard.addEventListener("mouseover", function (e) {
+      const card=flipCard.querySelector('.flip-card-back')
+      const character=card.getAttribute('data-character')
+      console.log(card,character)
+      getHeroData(card,character)
       if (isFlipped) {
         flipCards.forEach(function (card) {
           card.classList.remove("flip");
