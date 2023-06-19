@@ -1,6 +1,42 @@
+#searchResults {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr)); 
+  gap: 50px;
+  padding-top: 100px;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  background-color: white;
+  padding: 20px; /* Adjust the padding as needed */
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  text-align: center; /* Center the text */
+}
+
+.movie-card h2 {
+  margin-bottom: 10px; /* Add some bottom margin to the title */
+}
+
+.movie-card p {
+  margin-bottom: 20px; /* Add some bottom margin to the release date */
+}
+
+.movie-card img {
+  margin-bottom: 20px; /* Add some bottom margin to the image */
+  width: 100%; /* Adjust the image width as needed */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: contain; /* Maintain the image aspect ratio and fit inside the container */
+  max-height: 200px; /* Adjust the max-height as needed */
+}
 main {
   min-height: 78vh;
-  /* Adjust the height as needed */
+
 }
 footer {
   position: static;
@@ -74,6 +110,8 @@ footer {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 320px) {
-  /* CSS styles specific to iPhone SE */
+@media (max-width: 767px) {
+  #searchResults {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
