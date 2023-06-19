@@ -1,108 +1,153 @@
-const menuButton = document.getElementById("menu-button");
-const dropdownMenu = document.querySelector(".absolute.right-0");
+document.addEventListener('DOMContentLoaded', function () {
+  const searchButton = document.getElementById('searchButton');
+  const clearButton = document.getElementById('clearButton');
+  const searchResults = document.getElementById('searchResults');
 
-menuButton.addEventListener("click", function () {
-  const expanded = menuButton.getAttribute("aria-expanded") === "true" || false;
-  menuButton.setAttribute("aria-expanded", !expanded);
-  dropdownMenu.style.display = expanded ? "none" : "block";
-});
+  searchButton.addEventListener('click', searchMovies);
+  clearButton.addEventListener('click', clearResults);
 
-// Function to handle movie click event
-function handleMovieClick(link) {
-  window.location.href = link;
-}
+  function searchMovies() {
+    const searchText = document.getElementById('searchText').value;
 
-// Function to handle search
-function searchMovies() {
-  let input = document.getElementById('searchbar').value.toLowerCase();
-  let movies = document.getElementsByClassName('movies');
+    if (searchText.trim() !== '') {
+      const apiKey = '6fa1d761f4de3a57995383a6c3373f34';
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchText}`;
 
-  for (let i = 0; i < movies.length; i++) {
-    let movieName = movies[i].getAttribute('data-movie-name').toLowerCase();
-    if (!movieName.includes(input)) {
-      movies[i].style.display = 'none';
-    } else {
-      movies[i].style.display = 'list-item';
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          searchResults.innerHTML = '';
+
+          data.results.forEach((movie) => {
+            const movieCard = document.createElement('div');
+            movieCard.classList.add('movie-card');
+
+            const title = document.createElement('h2');
+            title.innerText = movie.title;
+            title.addEventListener('click', () => toggleDetails(movieCard));
+            movieCard.appendChild(title);
+
+            const releaseDate = document.createElement('p');
+            releaseDate.innerText = `Release Date: ${movie.release_date}`;
+            movieCard.appendChild(releaseDate);
+
+            const posterPath = movie.poster_path;
+            if (posterPath) {
+              const posterUrl = `https://image.tmdb.org/t/p/w500${posterPath}`;
+              const posterImage = document.createElement('img');
+              posterImage.src = posterUrl;
+              posterImage.alt = movie.title;
+              movieCard.appendChild(posterImage);
+            }
+
+            const detailsContainer = document.createElement('div');
+            detailsContainer.classList.add('details-container');
+            movieCard.appendChild(detailsContainer);
+
+            const trailerButton = document.createElement('button');
+            trailerButton.innerText = 'Toggle Trailer';
+            trailerButton.addEventListener('click', () => toggleTrailer(detailsContainer, movie.id));
+            detailsContainer.appendChild(trailerButton);
+
+            const reviewButton = document.createElement('button');
+            reviewButton.innerText = 'Toggle Reviews';
+            reviewButton.addEventListener('click', () => toggleReviews(detailsContainer, movie.id));
+            detailsContainer.appendChild(reviewButton);
+
+            searchResults.appendChild(movieCard);
+          });
+        })
+        .catch((error) => {
+          console.log('An error occurred:', error);
+        });
     }
   }
-}
 
-// Array of movie names and corresponding links
-const movies = [
-  { name: 'captain america first avenger', link: 'https://www.themoviedb.org/movie/1771-captain-america-the-first-avenger' },
-  { name: 'captain marvel', link: 'https://www.themoviedb.org/movie/299537-captain-marvel' },
-  { name: 'iron man', link: 'https://www.themoviedb.org/movie/1726-iron-man' },
-  { name: 'iron Man 2', link: 'https://www.themoviedb.org/movie/10138-iron-man-2' },
-  { name: 'the incredible hulk', link: 'https://www.themoviedb.org/movie/1724-the-incredible-hulk' },
-  { name: 'thor', link: 'https://www.themoviedb.org/movie/10195-thor' },
-  { name: 'the avengers', link: 'https://www.themoviedb.org/movie/24428-the-avengers' },
-  { name: 'thor darkworld', link: 'https://www.themoviedb.org/movie/76338-thor-the-dark-world' },
-  { name: 'iron man 3', link: 'https://www.themoviedb.org/movie/68721-iron-man-3' },
-  { name: 'captain america winter soldier', link: 'https://www.themoviedb.org/movie/100402-captain-america-the-winter-soldier' },
-  { name: 'guardians', link: 'https://www.themoviedb.org/movie/118340-guardians-of-the-galaxy' },
-  { name: 'guardians 2', link: 'https://www.themoviedb.org/movie/283995-guardians-of-the-galaxy-2' },
-  { name: 'avengers age of ultron', link: 'https://www.themoviedb.org/movie/99861-avengers-age-of-ultron' },
-  { name: 'ant man', link: 'https://www.themoviedb.org/movie/102899-ant-man' },
-  { name: 'captain amaerica civil war', link: 'https://www.themoviedb.org/movie/271110-captain-america-civil-war' },
-  { name: 'black widow', link: 'https://www.themoviedb.org/movie/497698-black-widow' },
-  { name: 'spider man homecoming', link: 'https://www.themoviedb.org/movie/315635-spider-man-homecoming' },
-  { name: 'black panther', link: 'https://www.themoviedb.org/movie/284054-black-panther' },
-  { name: 'doctor strange', link: 'https://www.themoviedb.org/movie/284052-doctor-strange' },
-  { name: 'thor rangarok', link: 'https://www.themoviedb.org/movie/284053-thor-ragnarok' },
-  { name: 'antman wasp', link: 'https://www.themoviedb.org/movie/363088-ant-man-and-the-wasp' },
-  { name: 'avengers infinity war', link: 'https://www.themoviedb.org/movie/299536-avengers-infinity-war' },
-  { name: 'avengers end game', link: 'https://www.themoviedb.org/movie/299534-avengers-endgame' },
-  { name: 'spiderman far from home', link: 'https://www.themoviedb.org/movie/429617-spider-man-far-from-home' },
-  { name: 'shang-chi ten rings', link: 'https://www.themoviedb.org/movie/566525-shang-chi-and-the-legend-of-the-ten-rings' },
-  { name: 'eternals', link: 'https://www.themoviedb.org/movie/524434-eternals' },
-  { name: 'spiderman no way-home', link: 'https://www.themoviedb.org/movie/634649-spider-man-no-way-home' },
-  { name: 'doctor strange multiverse', link: 'https://www.themoviedb.org/movie/453395-doctor-strange-in-the-multiverse-of-madness' },
-  { name: 'thor love and thunder', link: 'https://www.themoviedb.org/movie/616037-thor-love-and-thunder' },
-  { name: 'antman-quantumania', link: 'https://www.themoviedb.org/movie/640146-ant-man-and-the-wasp-quantumania' },
-  { name: 'guardians 3', link: 'https://www.themoviedb.org/movie/447365-guardians-of-the-galaxy-vol-3' },
-  { name: 'black panther wakanda forever', link: 'https://www.themoviedb.org/movie/505642-black-panther-wakanda-forever' },
-];
-
-function searchMovies(searchText) {
-  const movie = movies.find((m) => m.name === searchText.toLowerCase());
-  if (movie) {
-    window.location.href = movie.link;
-  } else {
-    $("#searchResults").html('<div class="text-white">No results found.</div>');
+  function clearResults() {
+    searchResults.innerHTML = '';
   }
-}
 
-$(document).ready(function () {
- 
+  function toggleDetails(movieCard) {
+    const detailsContainer = movieCard.querySelector('.details-container');
+    detailsContainer.classList.toggle('hidden');
+  }
 
-  $("#searchButton").click(function () {
-    const searchText = $("#searchText").val().toLowerCase();
-    searchMovies(searchText);
-  });
+  function toggleTrailer(detailsContainer, movieId) {
+    const trailerContainer = detailsContainer.querySelector('.trailer-container');
+    if (trailerContainer) {
+      trailerContainer.remove();
+    } else {
+      fetchTrailers(movieId)
+        .then((trailers) => {
+          if (trailers.length > 0) {
+            const newTrailerContainer = document.createElement('div');
+            newTrailerContainer.classList.add('trailer-container');
 
-  
-});
+            trailers.forEach((trailer) => {
+              const trailerLink = document.createElement('a');
+              trailerLink.href = `https://www.youtube.com/watch?v=${trailer.key}`;
+              trailerLink.innerText = `Watch Trailer ${trailer.name}`;
+              newTrailerContainer.appendChild(trailerLink);
+            });
 
-// Perform API request for each movie
-for (const movie of movieNames) {
-  const url = `https://api.themoviedb.org/3/search/movie?api_key=YOUR_API_KEY&query=${movie.name}`;
-
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      if (data.results.length > 0) {
-        const movieElement = document.createElement('li');
-        movieElement.className = 'movies';
-        movieElement.textContent = data.results[0].title;
-        movieElement.setAttribute('data-movie-name', movie.name);
-        movieElement.style.cursor = 'pointer';
-        movieElement.addEventListener('click', () => {
-          handleMovieClick(movie.link);
+            detailsContainer.appendChild(newTrailerContainer);
+          }
+        })
+        .catch((error) => {
+          console.log('Error fetching trailers:', error);
         });
-        document.getElementById('movieList').appendChild(movieElement);
-      }
-    })
-    .catch(error => {
-      console.log('Error occurred while fetching movie data:', error);
-    });
-}
+    }
+  }
+
+  function toggleReviews(detailsContainer, movieId) {
+    const reviewContainer = detailsContainer.querySelector('.review-container');
+    if (reviewContainer) {
+      reviewContainer.remove();
+    } else {
+      fetchReviews(movieId)
+        .then((reviews) => {
+          if (reviews.length > 0) {
+            const newReviewContainer = document.createElement('div');
+            newReviewContainer.classList.add('review-container');
+
+            reviews.forEach((review) => {
+              const reviewParagraph = document.createElement('p');
+              reviewParagraph.innerText = review.content;
+              newReviewContainer.appendChild(reviewParagraph);
+            });
+
+            detailsContainer.appendChild(newReviewContainer);
+          }
+        })
+        .catch((error) => {
+          console.log('Error fetching reviews:', error);
+        });
+    }
+  }
+
+  function fetchTrailers(movieId) {
+    const apiKey = '6fa1d761f4de3a57995383a6c3373f34';
+    const url = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}`;
+
+    return fetch(url)
+      .then((response) => response.json())
+      .then((data) => data.results)
+      .catch((error) => {
+        console.log('Error fetching trailers:', error);
+        return [];
+      });
+  }
+
+  function fetchReviews(movieId) {
+    const apiKey = '6fa1d761f4de3a57995383a6c3373f34';
+    const url = `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=${apiKey}`;
+
+    return fetch(url)
+      .then((response) => response.json())
+      .then((data) => data.results)
+      .catch((error) => {
+        console.log('Error fetching reviews:', error);
+        return [];
+      });
+  }
+});
