@@ -1,10 +1,10 @@
+
+
 main {
-  min-height: 78vh;
-  /* Adjust the height as needed */
+  min-height: calc(100vh - 10rem); 
+  margin-bottom: 10rem; 
 }
-.blue-text {
-  color: blue;
-}
+
 footer {
   background-color: black;
   padding: 1rem;
@@ -13,6 +13,13 @@ footer {
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.blue-text {
+  color: blue;
 }
 /* Optional: If you want to center the search bar vertically as well */
 .max-w-md {
