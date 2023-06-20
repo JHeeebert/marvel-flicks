@@ -43,17 +43,16 @@ document.addEventListener('DOMContentLoaded', function () {
             const detailsContainer = document.createElement('div');
             detailsContainer.classList.add('details-container');
             movieCard.appendChild(detailsContainer);
-
             const trailerButton = document.createElement('button');
             trailerButton.innerText = 'Toggle Trailer';
+            trailerButton.classList.add('blue-text'); // Added class for styling
             trailerButton.addEventListener('click', () => toggleTrailer(detailsContainer, movie.id));
             detailsContainer.appendChild(trailerButton);
-
             const reviewButton = document.createElement('button');
             reviewButton.innerText = 'Toggle Reviews';
+            reviewButton.classList.add('blue-text'); // Added class for styling
             reviewButton.addEventListener('click', () => toggleReviews(detailsContainer, movie.id));
             detailsContainer.appendChild(reviewButton);
-
             searchResults.appendChild(movieCard);
           });
         })
