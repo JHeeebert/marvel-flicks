@@ -15,21 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
       const mcuQuery = `Marvel ${searchText}`;
       const mcuUrl = `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${mcuQuery}`;
 
-      const sonyQuery = `Sony Marvel ${searchText}`;
-      const sonyUrl = `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${sonyQuery}`;
-
-      Promise.all([fetch(mcuUrl), fetch(sonyUrl)])
-        .then((responses) => Promise.all(responses.map((response) => response.json())))
-        .then(([mcuData, sonyData]) => {
-          const combinedResults = [...mcuData.results, ...sonyData.results];
+      fetch(mcuUrl)
+        .then((response) => response.json())
+        .then((mcuData) => {
+          const mcuResults = mcuData.results.filter(
+            (content) => content.media_type === 'movie' || content.media_type === 'tv'
+          );
 
           searchResults.innerHTML = '';
 
-          combinedResults.forEach((content) => {
-            if (content.media_type === 'movie' || content.media_type === 'tv') {
-              const contentCard = createContentCard(content);
-              searchResults.appendChild(contentCard);
-            }
+          mcuResults.forEach((content) => {
+            const contentCard = createContentCard(content);
+            searchResults.appendChild(contentCard);
           });
         })
         .catch((error) => {
@@ -65,28 +62,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const detailsContainer = document.createElement('div');
     detailsContainer.classList.add('details-container');
+    contentCard.appendChild(detailsContainer);
 
     const trailerButton = document.createElement('button');
     trailerButton.innerText = 'Toggle Trailer';
-    trailerButton.addEventListener('click', () => toggleTrailer(detailsContainer, content.id, content.media_type));
+    trailerButton.classList.add('blue-text');
+    trailerButton.addEventListener('click', () => toggleTrailer(detailsContainer, content.id));
     detailsContainer.appendChild(trailerButton);
 
     const reviewButton = document.createElement('button');
     reviewButton.innerText = 'Toggle Reviews';
+    reviewButton.classList.add('blue-text');
     reviewButton.addEventListener('click', () => toggleReviews(detailsContainer, content.title || content.name));
     detailsContainer.appendChild(reviewButton);
-
-    contentCard.appendChild(detailsContainer);
 
     return contentCard;
   }
 
-  function toggleTrailer(detailsContainer, contentId, mediaType) {
+  function toggleTrailer(detailsContainer, contentId) {
     const trailerContainer = detailsContainer.querySelector('.trailer-container');
     if (trailerContainer) {
       trailerContainer.remove();
     } else {
-      fetchTrailers(contentId, mediaType)
+      fetchTrailers(contentId)
         .then((trailers) => {
           if (trailers.length > 0) {
             const newTrailerContainer = document.createElement('div');
@@ -144,9 +142,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  function fetchTrailers(contentId, mediaType) {
+  function fetchTrailers(contentId) {
     const apiKey = '6fa1d761f4de3a57995383a6c3373f34';
-    const url = `https://api.themoviedb.org/3/${mediaType}/${contentId}/videos?api_key=${apiKey}`;
+    const url = `https://api.themoviedb.org/3/movie/${contentId}/videos?api_key=${apiKey}`;
 
     return fetch(url)
       .then((response) => response.json())
@@ -176,3 +174,4 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 });
+
