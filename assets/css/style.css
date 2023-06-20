@@ -2,7 +2,9 @@ main {
   min-height: 78vh;
   /* Adjust the height as needed */
 }
-
+.blue-text {
+  color: blue;
+}
 footer {
   background-color: black;
   padding: 1rem;
