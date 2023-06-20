@@ -10,10 +10,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[black] bg-cover bg-no-repeat " style="background-image: url('https://wallpaperaccess.com/full/1226160.jpg')">
-  <header class="bg-black text-red-500 py-5 text-right flex justify-between items-center bg-[url('https://wallpaperaccess.com/thumb/471472.jpg')]  bg-no-repeat bg-center">
+<body class="bg-[black] bg-cover bg-no-repeat "
+  style="background-image: url('https://wallpaperaccess.com/full/1226160.jpg')">
+  <header
+    class="bg-black text-red-500 py-5 text-right flex justify-between items-center bg-[url('https://wallpaperaccess.com/thumb/471472.jpg')]  bg-no-repeat bg-center">
     <a href="" id="home" alt="home-Btn">
-      <img src="https://seeklogo.com/images/M/marvel-comics-logo-B9EA67A8EE-seeklogo.com.png" alt="marvel logo" width="80" class="ml-5">
+      <img src="https://seeklogo.com/images/M/marvel-comics-logo-B9EA67A8EE-seeklogo.com.png" alt="marvel logo"
+        width="80" class="ml-5">
     </a>
 
     <nav class="flex flex-col items-center justify-between p-4">
@@ -24,7 +27,7 @@
           </svg>
         </button>
       </div>
-
+      <!--
       <div class="hidden lg:flex lg:items-center lg:w-auto" id="menu-items">
         <div class="text-sm lg:flex-grow">
           <a href="#" class="text-red-600 font-bold block mt-4 lg:inline-block lg:mt-0 mr-4">Movies</a>
@@ -32,51 +35,78 @@
           <a href="#" class="text-red-600 font-bold block mt-4 lg:inline-block lg:mt-0 mr-4">License</a>
         </div>
       </div>
+      -->
     </nav>
   </header>
 
   <main class="px-5 py-5 flex justify-center items-center">
     <div class="max-w-md">
       <div class="flex items-center justify-center mb-">
-        <input id="searchText" placeholder="Search Marvel Movies" class="bg-red-600 text-black rounded-xl px-3 py-2 focus:outline-none">
-        <button type="button" class="bg-red-600 text-gray-900 rounded-xl px-3 py-2 font-bold hover:bg-red-500 ml-4 h-10 focus:outline-none" id="searchButton">
+        <input id="searchText" placeholder="Search Marvel Movies"
+          class="bg-red-600 text-black rounded-xl px-3 py-2 focus:outline-none">
+        <button type="button"
+          class="bg-red-600 text-gray-900 rounded-xl px-3 py-2 font-bold hover:bg-red-500 ml-4 h-10 focus:outline-none"
+          id="searchButton">
           <img src="https://cdn-icons-png.flaticon.com/128/751/751463.png" class="h-4">
         </button>
-        <button type="button" class="bg-red-600 text-gray-900 rounded-xl px-3 py-2 font-bold hover:bg-red-500 ml-2 h-10 focus:outline-none" id="clearButton">
+        <button type="button"
+          class="bg-red-600 text-gray-900 rounded-xl px-3 py-2 font-bold hover:bg-red-500 ml-2 h-10 focus:outline-none"
+          id="clearButton">
           <img src="https://img.icons8.com/?size=512&id=68064&format=png" class="h-4">
         </button>
       </div>
       <div id="searchResults" class="flex flex-wrap justify-center"></div>
     </div>
-  </main>
-  <footer class="bg-black py-4   static bottom-0 w-full">
-    <div class="container mx-auto px-4 flex flex-col justify-between items-center text-center">
-      <div class="flex flex-col items-center justify-center flex-grow">
-        <div class="flip-container">
-          <div class="flipper">
-            <p class="text-red-600 hover-flip font-bold">&copy; 2023 Marvel Flicks. All Rights Reserved</p>
-            <p class="back text-red-600 font-bold">Like what you see? Click on one of the streaming services below!</p>
+    <!-- Movie cards go here -->
+    </div>
+    </div>
+    </aside>
+
+
+
+
+
+
+
+    <!-- Continue adding the remaining movies in the same format -->
+
+
+    <!-- adding as many place holders as needed, its gonna look goofy but here it goes-->
+
+
+    <!--
+    changed my mind
+    bg-[url('https://wallpapercave.com/dwp1x/wp9311676.jpg')]  bg-no-repeat bg-center-->
+
+    <footer class="bg-black py-4 fixed bottom-0 w-full">
+      <div class="container mx-auto px-4 flex flex-col justify-between items-center text-center h-full ">
+        <div class="flex flex-col items-center justify-center flex-grow">
+          <div class="flip-container">
+            <div class="flipper">
+              <p class="text-red-600 hover-flip font-bold">&copy; 2023 Marvel Flicks. All Rights Reserved</p>
+              <p class="back text-red-600 font-bold">Like what you see? Click on one of the streaming services below!
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="flex items-center justify-center">
-      <a href="https://www.youtube.com/" id="YouTube" target="_blank" rel="">
-        <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Youtube_icon-icons.com_66802.png" alt="YouTube"
-          class="w-11 ml-4 h-14 mx-5 transition-opacity duration-500 hover:opacity-75">
-      </a>
-      <a href="https://www.netflix.com/login" id="Netflix" target="_blank" rel="">
-        <img src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png" alt="Netflix"
-          class="ml-4 h-11 transition-opacity duration-500 hover:opacity-75">
-      </a>
-      <a href="https://www.disneyplus.com/login" id="Disney" target="_blank" rel="">
-        <img src="https://cdn.icon-icons.com/icons2/2657/PNG/256/disney_plus_icon_161064.png" alt="Disney Plus"
-          class="ml-4 h-14 transition-opacity duration-500 hover:opacity-75">
-      </a>
-    </div>
-  </footer>
-  <script src="./assets/js/script.js"></script>
+      </div>
+      <div class="flex items-center justify-center">
+        <a href="https://www.youtube.com/" id="YouTube" target="_blank" rel="">
+          <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Youtube_icon-icons.com_66802.png" alt="YouTube"
+            class="w-11 ml-4 h-14 mx-5 transition-opacity duration-500 hover:opacity-75">
+        </a>
+        <a href="https://www.netflix.com/login" id="Netflix" target="_blank" rel="">
+          <img src="https://www.freepnglogos.com/uploads/netflix-logo-app-png-16.png" alt="Netflix"
+            class="ml-4 h-11 transition-opacity duration-500 hover:opacity-75">
+        </a>
+        <a href="https://www.disneyplus.com/login" id="Disney" target="_blank" rel="">
+          <img src="https://cdn.icon-icons.com/icons2/2657/PNG/256/disney_plus_icon_161064.png" alt="Disney Plus"
+            class="ml-4 h-14 transition-opacity duration-500 hover:opacity-75">
+        </a>
+      </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
-
