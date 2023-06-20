@@ -5,6 +5,9 @@ main {
 .blue-text {
   color: blue;
 }
+.movie-card {
+  color: white;
+}
 footer {
   background-color: black;
   padding: 1rem;
