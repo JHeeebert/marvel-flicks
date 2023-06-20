@@ -1,17 +1,6 @@
-#searchResults {
-padding-top: 50px;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
 main {
-  flex: 1;
-  padding: 5px;
+  min-height: 78vh;
+  /* Adjust the height as needed */
 }
 
 footer {
@@ -22,17 +11,6 @@ footer {
   align-items: center;
   justify-content: space-between;
   text-align: center;
-}
-.movie-card {
-  color: white;
-  
-  }
-  .blue-text {
-    color: blue;
-  }
-
-main {
-  min-height: 618px; /* Adjust the height as needed */
 }
 /* Optional: If you want to center the search bar vertically as well */
 .max-w-md {
