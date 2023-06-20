@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const searchResults = document.getElementById('searchResults');
   searchButton.addEventListener('click', searchMovies);
   clearButton.addEventListener('click', clearResults);
+
   function searchMovies() {
     const searchText = document.getElementById('searchText').value;
     if (searchText.trim() !== '') {
@@ -36,10 +37,12 @@ document.addEventListener('DOMContentLoaded', function () {
             movieCard.appendChild(detailsContainer);
             const trailerButton = document.createElement('button');
             trailerButton.innerText = 'Toggle Trailer';
+            trailerButton.classList.add('blue-text'); // Added class for styling
             trailerButton.addEventListener('click', () => toggleTrailer(detailsContainer, movie.id));
             detailsContainer.appendChild(trailerButton);
             const reviewButton = document.createElement('button');
             reviewButton.innerText = 'Toggle Reviews';
+            reviewButton.classList.add('blue-text'); // Added class for styling
             reviewButton.addEventListener('click', () => toggleReviews(detailsContainer, movie.id));
             detailsContainer.appendChild(reviewButton);
             searchResults.appendChild(movieCard);
@@ -51,7 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   function clearResults() {
-    searchResults.innerHTML = '';
+    const searchText = document.getElementById('searchText');
+    searchText.value = ''; 
+    searchResults.innerHTML = ''; 
   }
   function toggleDetails(movieCard) {
     const detailsContainer = movieCard.querySelector('.details-container');
