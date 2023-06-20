@@ -62,9 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
   }
-
-  function clearResults() {
-    searchResults.innerHTML = '';
+ function clearResults() {
+    const searchText = document.getElementById('searchText');
+    searchText.value = ''; 
+    searchResults.innerHTML = ''; 
   }
 
   function toggleDetails(movieCard) {
