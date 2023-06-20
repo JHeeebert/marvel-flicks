@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function fetchReviews(contentTitle) {
     const apiKey = 'f72fd7a';
     const encodedTitle = encodeURIComponent(contentTitle);
-    const url = `http://www.omdbapi.com/?t=${encodedTitle}&apikey=${apiKey}&type=movie`;
+    const url = `https://www.omdbapi.com/?t=${encodedTitle}&apikey=${apiKey}&type=movie`;
 
     return fetch(url)
       .then((response) => response.json())
