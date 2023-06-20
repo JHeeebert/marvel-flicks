@@ -32,23 +32,8 @@ footer {
   }
 
 main {
-  min-height: 78vh;
+  min-height: 618px; /* Adjust the height as needed */
 }
-
-footer {
-  position: static;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: black;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-}
-
 /* Optional: If you want to center the search bar vertically as well */
 .max-w-md {
   display: flex;
