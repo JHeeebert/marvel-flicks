@@ -1,7 +1,46 @@
+#searchResults {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 50px;
+  padding-top: 100px;
+  justify-items: center;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  background-color: black;
+  color: red;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 200px;
+  text-align: center;
+}
+
+.movie-card h2 {
+  margin-bottom: 10px;
+}
+
+.movie-card p {
+  margin-bottom: 20px;
+}
+
+.movie-card img {
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 200px;
+}
+
 main {
   min-height: 78vh;
-  /* Adjust the height as needed */
 }
+
 footer {
   position: static;
   bottom: 0;
@@ -15,6 +54,7 @@ footer {
   justify-content: space-between;
   text-align: center;
 }
+
 /* Optional: If you want to center the search bar vertically as well */
 .max-w-md {
   display: flex;
@@ -22,6 +62,7 @@ footer {
   justify-content: center;
   height: 100%;
 }
+
 /* Styles for the movie container */
 
 /* Additional styles for the flip card */
@@ -38,7 +79,8 @@ footer {
   object-fit: cover;
   border-radius: 10px;
 }
-/*simple hover flip fort the customized Copy right footer*/
+
+/* Simple hover flip for the customized Copy right footer */
 .flip-container {
   perspective: 1000px;
   display: inline-block;
@@ -74,6 +116,52 @@ footer {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 320px) {
-  /* CSS styles specific to iPhone SE */
+@media (max-width: 1920px) {
+  /* Tablet mode */
+  #searchResults {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 250px;
+
+  }
+}
+@media (max-width: 1600px) {
+  /* Tablet mode */
+  #searchResults {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 250px;
+
+  }
+}
+@media (max-width: 1300px) {
+  /* Tablet mode */
+  #searchResults {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 250px;
+
+  }
+}
+@media (max-width: 1023px) {
+  /* Tablet mode */
+  #searchResults {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 250px;
+
+  }
+}
+
+@media (max-width: 750px) {
+  /* Mobile mode */
+  #searchResults {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    padding-right: 0;
+  }
+}
+@media (max-width: 380px) {
+  /* Mobile mode */
+  #searchResults {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+    padding-right: 0;
+  }
 }
