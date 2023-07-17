@@ -1,15 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
   const searchButton = document.getElementById('searchButton');
   const clearButton = document.getElementById('clearButton');
+  const searchInput = document.getElementById('searchText');
   const searchResults = document.getElementById('searchResults');
 
   searchButton.addEventListener('click', searchMarvelContent);
   clearButton.addEventListener('click', clearResults);
 
   function searchMarvelContent() {
-    const searchText = document.getElementById('searchText').value;
+    const searchText = searchInput.value.trim();
 
-    if (searchText.trim() !== '') {
+    if (searchText !== '') {
       const apiKey = '6fa1d761f4de3a57995383a6c3373f34';
 
       const mcuQuery = `Marvel ${searchText}`;
@@ -22,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
             (content) => content.media_type === 'movie' || content.media_type === 'tv'
           );
 
-          searchResults.innerHTML = '';
+          displayResults(mcuResults);
 
-          mcuResults.forEach((content) => {
-            const contentCard = createContentCard(content);
-            searchResults.appendChild(contentCard);
-          });
+          // searched content in localStorage
+          const storedResults = localStorage.getItem('searchedResults');
+          const updatedResults = storedResults ? JSON.parse(storedResults).concat(mcuResults) : mcuResults;
+          localStorage.setItem('searchedResults', JSON.stringify(updatedResults));
         })
         .catch((error) => {
           console.log('An error occurred:', error);
@@ -36,8 +37,28 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function clearResults() {
+    searchInput.value = '';
+
+  
     searchResults.innerHTML = '';
   }
+
+  function displayResults(results) {
+    searchResults.innerHTML = '';
+
+    results.forEach((content) => {
+      const contentCard = createContentCard(content);
+      searchResults.appendChild(contentCard);
+    });
+  }
+
+  
+  const storedResults = localStorage.getItem('searchedResults');
+  if (storedResults) {
+    const parsedResults = JSON.parse(storedResults);
+    displayResults(parsedResults);
+  }
+
 
   function createContentCard(content) {
     const contentCard = document.createElement('div');
@@ -107,6 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch((error) => {
           console.log('Error fetching trailers:', error);
+          displayErrorMessage('An error occurred while fetching trailers. Please try again later.');
         });
     }
   }
@@ -138,6 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .catch((error) => {
           console.log('Error fetching reviews:', error);
+          displayErrorMessage('An error occurred while fetching reviews. Please try again later.');
         });
     }
   }
@@ -172,6 +195,13 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Error fetching reviews:', error);
         return [];
       });
+  }
+
+  function displayErrorMessage(message) {
+    const errorMessage = document.createElement('p');
+    errorMessage.classList.add('error-message');
+    errorMessage.innerText = message;
+    searchResults.appendChild(errorMessage);
   }
 });
 
