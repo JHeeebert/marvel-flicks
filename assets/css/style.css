@@ -9,22 +9,39 @@ main {
   margin-bottom: 10rem; 
 }
 
-body{
-  color: aliceblue;
-}
-footer {
-  background-color: black;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
+body {
+      font-family: Arial, sans-serif;
+    }
+    .content-card {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .content-card h2 {
+      margin-top: 0;
+    }
+    .content-card img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 10px;
+    }
+    .details-container {
+      margin-top: 10px;
+    }
+    .blue-button {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .blue-button:hover {
+      background-color: #0056B3;
+    }
 /* Optional: If you want to center the search bar vertically as well */
 .max-w-md {
   display: flex;
