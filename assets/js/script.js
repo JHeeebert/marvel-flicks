@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
           displayResults(mcuResults);
 
-          // searched content in localStorage
           const storedResults = localStorage.getItem('searchedResults');
           const updatedResults = storedResults ? JSON.parse(storedResults).concat(mcuResults) : mcuResults;
           localStorage.setItem('searchedResults', JSON.stringify(updatedResults));
@@ -38,27 +37,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function clearResults() {
     searchInput.value = '';
-
-  
     searchResults.innerHTML = '';
   }
 
   function displayResults(results) {
     searchResults.innerHTML = '';
-
     results.forEach((content) => {
       const contentCard = createContentCard(content);
       searchResults.appendChild(contentCard);
     });
   }
 
-  
   const storedResults = localStorage.getItem('searchedResults');
   if (storedResults) {
     const parsedResults = JSON.parse(storedResults);
     displayResults(parsedResults);
   }
-
 
   function createContentCard(content) {
     const contentCard = document.createElement('div');
@@ -110,19 +104,15 @@ document.addEventListener('DOMContentLoaded', function () {
           if (trailers.length > 0) {
             const newTrailerContainer = document.createElement('div');
             newTrailerContainer.classList.add('trailer-container');
-
             trailers.forEach((trailer) => {
               const trailerBox = document.createElement('div');
               trailerBox.classList.add('trailer-box');
-
               const trailerLink = document.createElement('a');
               trailerLink.href = `https://www.youtube.com/watch?v=${trailer.key}`;
               trailerLink.innerText = `Watch Trailer ${trailer.name}`;
               trailerBox.appendChild(trailerLink);
-
               newTrailerContainer.appendChild(trailerBox);
             });
-
             detailsContainer.appendChild(newTrailerContainer);
           }
         })
@@ -143,18 +133,14 @@ document.addEventListener('DOMContentLoaded', function () {
           if (reviews.length > 0) {
             const newReviewContainer = document.createElement('div');
             newReviewContainer.classList.add('review-container');
-
             reviews.forEach((review) => {
               const reviewBox = document.createElement('div');
               reviewBox.classList.add('review-box');
-
               const reviewParagraph = document.createElement('p');
               reviewParagraph.innerText = review.Source + ': ' + review.Value;
               reviewBox.appendChild(reviewParagraph);
-
               newReviewContainer.appendChild(reviewBox);
             });
-
             detailsContainer.appendChild(newReviewContainer);
           }
         })
@@ -168,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function () {
   function fetchTrailers(contentId) {
     const apiKey = '6fa1d761f4de3a57995383a6c3373f34';
     const url = `https://api.themoviedb.org/3/movie/${contentId}/videos?api_key=${apiKey}`;
-
     return fetch(url)
       .then((response) => response.json())
       .then((data) => data.results.filter((result) => result.site === 'YouTube'))
@@ -182,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const apiKey = 'f72fd7a';
     const encodedTitle = encodeURIComponent(contentTitle);
     const url = `https://www.omdbapi.com/?t=${encodedTitle}&apikey=${apiKey}&type=movie`;
-
     return fetch(url)
       .then((response) => response.json())
       .then((data) => {
