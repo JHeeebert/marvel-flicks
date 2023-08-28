@@ -1,6 +1,6 @@
 #searchResults {
   padding-top: 50px;
-  }
+}
 .blue-text {
   color: blue;
 }
@@ -10,38 +10,60 @@ main {
 }
 
 body {
-      font-family: Arial, sans-serif;
-    }
-    .content-card {
-      border: 1px solid #ccc;
-      padding: 20px;
-      margin: 10px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .content-card h2 {
-      margin-top: 0;
-    }
-    .content-card img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 10px;
-    }
-    .details-container {
-      margin-top: 10px;
-    }
-    .blue-button {
-      background-color: #007BFF;
-      color: #fff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-    .blue-button:hover {
-      background-color: #0056B3;
-    }
+  font-family: Arial, sans-serif;
+}
+.content-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.content-card h2 {
+  margin-top: 0;
+}
+.content-card img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+.details-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.toggle-button {
+  background-color: #000000;
+  color: rgb(228, 0, 0);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.toggle-button:hover {
+  background-color: #000000;
+}
+.review-button {
+  background-color: #FF5733;
+  color: white;
+}
+.review-button:hover {
+  background-color: #D23A0A;
+}
+.blue-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.blue-button:hover {
+  background-color: #0056B3;
+}
+
 /* Optional: If you want to center the search bar vertically as well */
 .max-w-md {
   display: flex;
