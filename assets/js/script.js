@@ -85,17 +85,17 @@ document.addEventListener('DOMContentLoaded', function () {
     detailsContainer.classList.add('details-container');
     contentCard.appendChild(detailsContainer);
 
-    const trailerButton = document.createElement('button');
-    trailerButton.innerText = 'Toggle Trailer';
-    trailerButton.classList.add('blue-text');
-    trailerButton.addEventListener('click', () => toggleTrailer(detailsContainer, content.id));
-    detailsContainer.appendChild(trailerButton);
+   const trailerButton = document.createElement('button');
+trailerButton.innerText = 'Toggle Trailer';
+trailerButton.classList.add('blue-button'); // Apply the blue-button class
+trailerButton.addEventListener('click', () => toggleTrailer(detailsContainer, content.id));
+detailsContainer.appendChild(trailerButton);
 
     const reviewButton = document.createElement('button');
-    reviewButton.innerText = 'Toggle Reviews';
-    reviewButton.classList.add('blue-text');
-    reviewButton.addEventListener('click', () => toggleReviews(detailsContainer, content.title || content.name));
-    detailsContainer.appendChild(reviewButton);
+reviewButton.innerText = 'Toggle Reviews';
+reviewButton.classList.add('blue-button'); // Apply the blue-button class
+reviewButton.addEventListener('click', () => toggleReviews(detailsContainer, content.title || content.name));
+detailsContainer.appendChild(reviewButton);
 
     return contentCard;
   }
